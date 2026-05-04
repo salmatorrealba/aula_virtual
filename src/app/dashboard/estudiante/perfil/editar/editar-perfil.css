@@ -1,0 +1,75 @@
+.editar-perfil-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto; /* ← centra el formulario */
+  padding-top: 10px;
+}
+
+.editar-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.editar-subtitle {
+  color: #000000;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.campo label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.campo input {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 8px;
+  border: 1px solid #2a2a2a;
+  background: #111;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.2s ease;
+}
+
+.campo input:focus {
+  border-color: #ff7a00;
+  background: #151515;
+  outline: none;
+}
+
+.botones {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.btn {
+  background: #ff7a00;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.2s ease;
+  padding: 14px 26px;
+}
+
+.btn:hover {
+  background: #e56d00;
+}
+
+.btn-cancelar {
+  background: #333;
+}
+
+.btn-cancelar:hover {
+  background: #2a2a2a;
+}

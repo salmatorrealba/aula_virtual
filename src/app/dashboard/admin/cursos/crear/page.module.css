@@ -1,0 +1,82 @@
+.crearPage {
+  width: 100%;
+  padding: 10px 0;
+  background: #f4f4f4;
+}
+
+.crearContainer {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.tituloCrear {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #333;
+}
+
+/* GRID DE 2 COLUMNAS */
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldFull {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  font-size: 14px;
+}
+
+.textarea {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  font-size: 14px;
+  min-height: 70px;
+  resize: vertical;
+}
+
+.btnRegistrar {
+  background: #f57c00;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 15px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btnRegistrar:hover {
+  background: #d96b00;
+}

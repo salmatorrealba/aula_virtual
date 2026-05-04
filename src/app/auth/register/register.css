@@ -1,0 +1,98 @@
+/* CONTENEDOR PRINCIPAL */
+.register-container {
+  width: 480px;
+  margin-top: -10px;
+  padding: 22px 26px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  /* SIN border-top, SIN border */
+}
+
+
+/* TÍTULO */
+.register-title {
+  font-size: 19px;           /* más pequeño */
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* FORMULARIO */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;                 /* menos separación */
+}
+
+/* LABELS */
+.register-label {
+  font-size: 11px;           /* pequeño como la referencia */
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 2px;
+}
+
+/* INPUTS */
+.register-input {
+  width: 100%;
+  padding: 6px 9px;          /* más pequeño */
+  font-size: 12px;           /* más pequeño */
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.register-input::placeholder {
+  font-size: 11px;
+  color: #9b9b9b;
+}
+
+/* CHECKBOX */
+.register-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;                  /* más compacto */
+  font-size: 11px;
+  color: #444;
+}
+
+/* BOTÓN */
+.register-button {
+  width: 100%;
+  background: #F57C00;
+  color: white;
+  font-weight: 600;
+  font-size: 13px;           /* más pequeño */
+  padding: 9px 0;            /* más pequeño */
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-button:hover {
+  background: #EF6C00;
+}
+
+/* FOOTER */
+.register-footer {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 11px;           /* más pequeño */
+  color: #666;
+}
+
+.register-footer a {
+  color: #F57C00;
+  margin: 0 10px;
+  font-weight: 500;
+}
+.register-background {
+  background-image: url("/img/Fondo-Login.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 40px;
+}

@@ -1,0 +1,74 @@
+.admin-topbar {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+  top: 0;
+  z-index: 20;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Menu superior */
+
+.admin-topbar-menu {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-topbar-menu a {
+  text-decoration: none;
+  color: #444;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.admin-topbar-menu a:hover {
+  color: #d17a00;
+}
+
+.admin-topbar-menu a.active {
+  color: #d17a00;
+}
+
+/* Perfil */
+
+.admin-topbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #dc8a0e;
+}
+
+.arrow {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+  stroke: #666;
+}
+.admin-topbar {
+  margin-bottom: 0; /* asegura que no “empuje” el contenido */
+}
+.admin-topbar::after {
+  content: "";
+  position: absolute;
+  right: 30px;
+  bottom: 0;
+  height: 3px;
+  width: 50px;
+  border-radius: 2px;
+}
+

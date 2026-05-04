@@ -1,0 +1,70 @@
+.curso-layout {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+}
+
+.curso-content {
+  flex: 1;
+}
+
+.curso-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.curso-main {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.curso-video {
+  width: 65%;
+  height: 360px;
+  border-radius: 10px;
+  background: #000;
+}
+
+.curso-diagrama {
+  width: 35%;
+  border-radius: 10px;
+}
+
+.curso-tabs {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: none;
+  background: #e6e6e6;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #ff7b00;
+  color: #fff;
+}
+
+.curso-recursos {
+  margin-top: 20px;
+}
+
+.recurso-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.pdf-icon {
+  width: 24px;
+}

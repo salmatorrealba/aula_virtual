@@ -1,0 +1,109 @@
+/* ================================
+   FONDO CON IMAGEN + OVERLAY
+================================ */
+.crearUsuario-page {
+  min-height: 100vh;
+  background-image: url("/img/fondo-aula.jpg"); /* Cambia por tu imagen */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* SUBE EL FORMULARIO */
+  padding-top: 40px;       /* AJUSTA LA ALTURA */
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.crearUsuario-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(3px);
+}
+
+/* ================================
+   CONTENEDOR DEL FORMULARIO
+================================ */
+.crearUsuario-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 28px;
+  width: 380px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 2;
+}
+
+/* ================================
+   TÍTULO
+================================ */
+.crearUsuario-title {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ================================
+   FORMULARIO
+================================ */
+.crearUsuario-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ================================
+   CAMPOS
+================================ */
+.crearUsuario-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.crearUsuario-field label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #444;
+}
+
+.crearUsuario-field input,
+.crearUsuario-field select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.crearUsuario-field input:focus,
+.crearUsuario-field select:focus {
+  border-color: #f57c00;
+  outline: none;
+  background: #fff;
+}
+
+/* ================================
+   BOTÓN
+================================ */
+.crearUsuario-btn {
+  background: #f57c00;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 10px;
+  width: 100%;
+  transition: background 0.2s ease;
+}
+
+.crearUsuario-btn:hover {
+  background: #d96b00;
+}

@@ -1,0 +1,454 @@
+:root {
+  --orange-50: #ffe0e6;
+  --orange-100: #fccfa8;
+  --orange-200: #f9a96a;
+  --orange-400: #f47830;
+  --orange-500: #f26522;
+  --orange-600: #c94e0e;
+  --orange-700: #9c340b;
+  --orange-800: #6e2705;
+  --orange-900: #3d1502;
+
+  --neutral-50: #fafaf9;
+  --neutral-100: #f4f3f1;
+  --neutral-200: #e8e6e2;
+  --neutral-300: #d0cec9;
+  --neutral-400: #a8a59f;
+  --neutral-500: #87866f;
+  --neutral-700: #525049;
+  --neutral-800: #313229;
+  --neutral-900: #1c1814;
+  --neutral-950: #0d0d08;
+
+  --bg-body: var(--neutral-50);
+  --bg-card: #ffffff;
+  --bg-sidebar: var(--neutral-900);
+  --text-main: var(--neutral-900);
+  --text-muted: var(--neutral-500);
+  --border-subtle: var(--neutral-200);
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --transition-fast: 0.18s ease-out;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--bg-body);
+  color: var(--text-main);
+}
+
+
+/* HACK: Ocultar sidebars duplicados */
+.admin-sidebar:not(:first-of-type),
+.student-sidebar:not(:first-of-type),
+.sidebar:not(:first-of-type) {
+  display: none !important;
+}
+.admin-sidebar {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: #0d0d0d;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+.admin-sidebar {
+  display: none !important;
+}
+
+.perfil-wrapper {
+  display: flex;
+}
+
+.perfil-content {
+  margin-left: 240px; /* ancho del sidebar */
+  padding: 40px;
+  width: 100%;
+}
+/* CARD PRINCIPAL */
+.profile-card {
+  background: transparent;
+  border: 1px solid #1f1f1f;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.25);
+  color: #fff;
+}
+
+/* HEADER DE LA CARD */
+.profile-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+/* AVATAR */
+.profile-card__avatar {
+  width: 90px;
+  height: 90px;
+  background: #222;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  color: #F57C00;
+  overflow: hidden;
+}
+
+.profile-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* BOTÓN CAMBIAR FOTO */
+.profile-card__avatar-edit {
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid #333;
+  color: #ccc;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.profile-card__avatar-edit:hover {
+  border-color: #F57C00;
+  color: #F57C00;
+}
+
+/* INFO DEL USUARIO */
+.profile-card__name {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.profile-card__role {
+  color: #F57C00;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.profile-card__email {
+  color: #bbb;
+}
+
+/* BOTONES */
+.btn--primary {
+  background: #F57C00;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn--primary:hover {
+  background: #ff8f1a;
+}
+
+.btn--secondary {
+  background: #f57c00;
+  color: #eaeaea;
+  border: 1px solid #2a2a2a;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn--secondary:hover {
+  background: #2a2a2a;
+}
+
+/* CAMPOS DEL FORMULARIO */
+.profile-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.profile-field__label {
+  color: #000000;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.profile-field__input {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.profile-field__input:read-only {
+  opacity: 0.8;
+}
+/* CENTRAR TODO EL CONTENIDO */
+/* CONTENEDOR GENERAL */
+.perfil-content {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  width: 100%;
+}
+
+/* CARD PRINCIPAL */
+.profile-card {
+  width: 100%;
+  max-width: 750px;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 0 35px rgba(0,0,0,0.45);
+  color: #fff;
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* HEADER */
+.profile-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 35px;
+}
+
+/* AVATAR */
+.profile-card__avatar {
+  width: 110px;
+  height: 110px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  border: 3px solid #F57C00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  color: #F57C00;
+  overflow: hidden;
+}
+
+.profile-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* BOTÓN CAMBIAR FOTO */
+.profile-card__avatar-edit {
+  margin-top: 12px;
+  background: transparent;
+  border: 1px solid #333;
+  color: #ccc;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.profile-card__avatar-edit:hover {
+  border-color: #F57C00;
+  color: #F57C00;
+}
+
+/* INFO */
+.profile-card__name {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.profile-card__role {
+  color: #F57C00;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.profile-card__email {
+  color: #bbb;
+}
+
+/* BOTONES */
+.profile-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn--primary {
+  background: #F57C00;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 600;
+}
+
+.btn--primary:hover {
+  background: #ff8f1a;
+}
+
+.btn--secondary {
+  background: #1a1a1a;
+  color: #eaeaea;
+  border: 1px solid #2a2a2a;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn--secondary:hover {
+  background: #2a2a2a;
+}
+
+/* CAMPOS */
+.profile-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.profile-field__label {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.profile-field__input {
+  width: 100%;
+  padding: 14px;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+}
+/* PANEL GENERAL */
+.panel {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 40px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 35px rgba(0,0,0,0.45);
+  animation: fadeIn 0.4s ease-out;
+  color: #fff;
+}
+
+/* TÍTULO */
+.panel__title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+/* GRID DE CAMPOS */
+.panel__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+/* CAMPOS */
+.panel__field label {
+  display: block;
+  margin-bottom: 6px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.panel__field input {
+  width: 100%;
+  padding: 14px;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+}
+
+/* ACCIONES */
+.panel__actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 14px;
+}
+
+/* BOTONES */
+.btn-primary {
+  background: #F57C00;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-primary:hover {
+  background: #ff8f1a;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #F57C00;
+  color: #F57C00;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-secondary:hover {
+  background: rgba(245,124,0,0.1);
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

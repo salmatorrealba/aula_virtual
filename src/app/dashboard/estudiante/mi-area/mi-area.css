@@ -1,0 +1,267 @@
+.mi-area-wrapper {
+  width: 100%;
+  padding: 40px 60px;
+  background-image: url("/img/Fondo-Login.jpg");
+}
+
+.mi-area-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* SECCIONES */
+.mi-area-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* LISTA */
+.mi-area-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.mi-area-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 3pc;
+  transition: 0.2s ease;
+}
+
+.mi-area-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.mi-area-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.fecha {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.estudiante-layout .course-sidebar {
+  display: none !important;
+}/* ================================
+   CONTENEDOR GENERAL
+================================ */
+.student-area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px;
+  background:transparent;
+}
+
+.area-content {
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* ================================
+   TÍTULO PRINCIPAL
+================================ */
+.area-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.area-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* ================================
+   SECCIÓN DE CURSOS ENTREGADOS
+================================ */
+.entregados-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  border-left: 4px solid #f57c00;
+  padding-left: 10px;
+}
+
+/* ================================
+   TARJETAS DE CURSOS ENTREGADOS
+================================ */
+.entregado-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.25s ease;
+}
+
+.entregado-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+}
+
+.entregado-info strong {
+  font-size: 18px;
+  color: #222;
+}
+
+.entregado-info p {
+  font-size: 14px;
+  color: #777;
+  margin-top: 4px;
+}
+
+.entregado-icon {
+  font-size: 26px;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #f57c00, #ff9800);
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  font-size: 15px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+}
+.progreso-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.25s ease;
+}
+
+.progreso-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+}
+
+.progreso-info strong {
+  font-size: 18px;
+  color: #222;
+}
+
+.progreso-info p {
+  font-size: 14px;
+  color: #777;
+  margin-top: 4px;
+}
+
+.progreso-icon {
+  font-size: 26px;
+  color: #f57c00; /* naranja para pendientes */
+  font-weight: bold;
+}
+.btn-entregar-outline {
+  background: transparent;
+  border: 2px solid #f57c00;
+  color: #f57c00;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn-entregar-outline:hover {
+  background: #f57c00;
+  color: white;
+  transform: translateY(-2px);
+}
+/* Animación del icono */
+@keyframes pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1.3); opacity: 1; }
+}
+
+/* Botón ENTREGAR */
+.btn-entregar {
+  background: linear-gradient(135deg, #f57c00, #ff9800);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-size: 15px;
+}
+
+.btn-entregar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+}
+
+/* Animación al hacer clic */
+.btn-entregar:active {
+  transform: scale(0.95);
+}.entregar-btn {
+  background: linear-gradient(135deg, #F57C00, #FF8A25);
+  color: #fff;
+  padding: 10px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .25s ease;
+  box-shadow: 0 4px 12px rgba(245, 124, 0, 0.25);
+  letter-spacing: .3px;
+}
+
+.entregar-btn:hover {
+  background: linear-gradient(135deg, #EF6C00, #FF7A00);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245, 124, 0, 0.35);
+}
+
+.entregar-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(245, 124, 0, 0.25);
+}
