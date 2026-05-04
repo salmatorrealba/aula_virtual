@@ -1,0 +1,45 @@
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #111;
+  color: white;
+  padding: 30px 18px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 45px;
+  color: #ff7a00;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ddd;
+  font-size: 15px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  transition: 0.25s ease;
+}
+
+.item:hover {
+  background: #222;
+  color: #ff7a00;
+}
+
+.item svg {
+  stroke-width: 1.7;
+}

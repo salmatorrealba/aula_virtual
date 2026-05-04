@@ -3,6 +3,25 @@
   background-image: url("/img/Fondo-Login.jpg");
 }
 
+.hero-card {
+  background-image: url("/img/curso-1.jpg");
+  padding: 60px 70px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  max-width: 650px;
+  margin: 0 auto 25px auto;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.hero-card h1 {
+  color: rgb(0, 0, 0);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
 /* HERO */
 .hero {
   width: 100%;

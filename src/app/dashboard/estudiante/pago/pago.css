@@ -1,0 +1,117 @@
+/* CONTENEDOR GENERAL */
+.pago-page {
+  padding: 40px;
+  color: rgb(0, 0, 0);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* PASOS */
+.pago-steps {
+  margin-bottom: 35px;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  color: #000000;
+}
+
+.pago-steps .active {
+  color: #ff7a00;
+  font-weight: 700;
+}
+
+/* LAYOUT */
+.pago-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 40px;
+}
+
+/* TARJETAS */
+.pago-resumen,
+.pago-form {
+  background:transparent;
+  border-radius: 14px;
+  padding: 28px;
+  border: 1px solid #1f1f1f;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* TITULOS */
+.pago-resumen h2,
+.pago-form h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #ff7a00;
+}
+
+/* SUBTÍTULOS */
+.form-section-title {
+  margin-top: 30px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #ff7a00;
+  font-weight: 600;
+  border-left: 3px solid #ff7a00;
+  padding-left: 10px;
+}
+
+/* GRUPOS DE INPUT */
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 14px;
+  color: #050505;
+  font-weight: 500;
+}
+
+/* INPUTS */
+input {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #2a2a2a;
+  padding: 12px 14px;
+  color: #000000;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+input:focus {
+  border-color: #ff7a00;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 122, 0, 0.4);
+}
+
+/* FILAS */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 0.6fr;
+  gap: 18px;
+}
+
+/* BOTÓN FINALIZAR */
+.btn-finalizar {
+  margin-top: 25px;
+  width: 100%;
+  background: #ff7a00;
+  color: #fff;
+  border: none;
+  padding: 14px 0;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-finalizar:hover {
+  background: #e86d00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 122, 0, 0.35);
+}

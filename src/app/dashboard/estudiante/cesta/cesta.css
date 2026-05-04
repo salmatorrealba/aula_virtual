@@ -1,13 +1,17 @@
 .cesta-page {
   padding: 30px;
+  color: rgb(0, 0, 0);
 }
 
+/* TÍTULO */
 .cesta-title {
   font-size: 28px;
   font-weight: 700;
   margin: 30px 0;
+  text-align: center;
 }
 
+/* LAYOUT */
 .cesta-layout {
   display: flex;
   gap: 40px;
@@ -21,11 +25,11 @@
 .cesta-item {
   display: flex;
   align-items: center;
-  background: white;
+  background: #ffffff;
   padding: 15px;
   border-radius: 12px;
   margin-bottom: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 1px solid #222;
 }
 
 .cesta-item img {
@@ -46,21 +50,23 @@
   margin-top: 5px;
 }
 
+/* BOTÓN ELIMINAR */
 .btn-eliminar {
   margin-left: auto;
   background: none;
   border: none;
   font-size: 22px;
   cursor: pointer;
+  color: #ff7a00;
 }
 
 /* RESUMEN */
 .cesta-resumen {
   flex: 1;
-  background: white;
+  background: #fffdfd;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 1px solid #222;
 }
 
 .cesta-resumen h2 {
@@ -79,7 +85,8 @@
   font-weight: 700;
 }
 
-.btn-pago {
+/* BOTÓN PROCEDER AL PAGO */
+.btn-proceder-pago {
   width: 100%;
   background: #ff7a00;
   color: white;
@@ -89,8 +96,12 @@
   font-size: 16px;
   cursor: pointer;
   margin-top: 20px;
+  text-align: center;
+  display: block;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
 }
 
-.btn-pago:hover {
-  background: #e86d00;
+.btn-proceder-pago:hover {
+  opacity: 0.85;
 }

@@ -1,75 +1,83 @@
 "use client";
 
+import ConfigTopBar from "@/components/custom/ConfigTopBar";
+import "@/components/custom/ConfigTopBar.css";
 import { useEffect, useState } from "react";
-import TopBar from "@/components/students/StudentTopBar";
-import { getCart, removeFromCart } from "@/utils/cart";
 import "./cesta.css";
 
 export default function CestaPage() {
   const [cesta, setCesta] = useState([]);
 
   useEffect(() => {
-    setCesta(getCart());
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCesta(cart);
   }, []);
 
-  function eliminar(id) {
-    removeFromCart(id);
-    setCesta(getCart());
-  }
+  const eliminarCurso = (id) => {
+    const nuevaCesta = cesta.filter((curso) => curso.id !== id);
+    setCesta(nuevaCesta);
+    localStorage.setItem("cart", JSON.stringify(nuevaCesta));
+  };
 
-  const subtotal = cesta.reduce((acc, c) => acc + c.precio, 0);
+  const subtotal = cesta.reduce((acc, curso) => acc + curso.precio, 0);
 
   return (
-    <div className="cesta-page">
-      <TopBar />
+    <>
+      {/* 🔶 TOPBAR AÑADIDO AQUÍ */}
+      <ConfigTopBar />
 
-      <h1 className="cesta-title">Cesta de compra</h1>
+      <div className="cesta-page">
+        <h1 className="cesta-title">Cesta de compra</h1>
 
-      <div className="cesta-layout">
-        {/* LISTA DE CURSOS */}
-        <div className="cesta-lista">
-          {cesta.length === 0 && (
-            <p className="cesta-vacia">Tu cesta está vacía.</p>
-          )}
+        <div className="cesta-layout">
 
-          {cesta.map((curso) => (
-            <div key={curso.id} className="cesta-item">
-              <img src={curso.imagen} alt={curso.titulo} />
+          {/* LISTA */}
+          <div className="cesta-lista">
+            {cesta.map((curso) => (
+              <div key={curso.id} className="cesta-item">
+                <img src={curso.imagen} alt={curso.titulo} />
 
-              <div className="cesta-info">
-                <h3>{curso.titulo}</h3>
-                <p className="precio">{curso.precio}€</p>
+                <div className="cesta-info">
+                  <h3>{curso.titulo}</h3>
+                  <p className="precio">{curso.precio}€</p>
+                </div>
+
+                <button
+                  className="btn-eliminar"
+                  onClick={() => eliminarCurso(curso.id)}
+                >
+                  🗑️
+                </button>
               </div>
+            ))}
+          </div>
 
-              <button className="btn-eliminar" onClick={() => eliminar(curso.id)}>
-                🗑
-              </button>
+          {/* RESUMEN */}
+          <div className="cesta-resumen">
+            <h2>Resumen del pedido</h2>
+
+            <div className="resumen-linea">
+              <span>Subtotal</span>
+              <span>{subtotal}€</span>
             </div>
-          ))}
-        </div>
 
-        {/* RESUMEN DEL PEDIDO */}
-        <div className="cesta-resumen">
-          <h2>Resumen del pedido</h2>
+            <div className="resumen-linea">
+              <span>Impuestos</span>
+              <span>0€</span>
+            </div>
 
-          <div className="resumen-linea">
-            <span>Subtotal</span>
-            <span>{subtotal}€</span>
+            <div className="resumen-total">
+              <span>Total</span>
+              <span>{subtotal}€</span>
+            </div>
+
+            <a href="/dashboard/estudiante/pago" className="btn-proceder-pago">
+              Proceder al pago
+            </a>
           </div>
 
-          <div className="resumen-linea">
-            <span>Impuestos</span>
-            <span>0€</span>
-          </div>
-
-          <div className="resumen-total">
-            <span>Total</span>
-            <span>{subtotal}€</span>
-          </div>
-
-          <button className="btn-pago">Proceder al pago</button>
         </div>
       </div>
-    </div>
+    </>
   );
 }

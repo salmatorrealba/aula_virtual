@@ -1,0 +1,118 @@
+.page {
+  padding: 30px 40px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.layout {
+  display: flex;
+  gap: 40px;
+}
+
+/* TABLA */
+.tableWrapper {
+  width: 60%;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.table th {
+  background: #f5f5f5;
+  padding: 14px;
+  text-align: left;
+  font-size: 14px;
+  color: #555;
+}
+
+.table td {
+  padding: 14px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.btnVer {
+  background: #ff7a00;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btnVer:hover {
+  background: #ff8f2a;
+}
+
+/* PANEL LATERAL */
+.panel {
+  width: 40%;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  min-height: 350px;
+}
+
+.placeholder {
+  text-align: center;
+  color: #777;
+  margin-top: 40px;
+}
+
+.panelTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.panelCurso {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.group input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.btnProgramar {
+  background: #222;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 15px;
+}
+
+.btnProgramar:hover {
+  background: #444;
+}

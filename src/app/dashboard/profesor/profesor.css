@@ -1,0 +1,93 @@
+/* LAYOUT GENERAL CON SIDEBAR */
+.profesor-page {
+  display: flex;
+  width: 100%;
+}
+
+/* ZONA PRINCIPAL A LA DERECHA DEL SIDEBAR */
+.profesor-main {
+  margin-left: 220px; /* ancho del sidebar */
+  width: calc(100% - 220px);
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+/* LAYOUT INTERNO DEL DASHBOARD (igual admin) */
+.dashboard-layout {
+  display: flex;
+  gap: 40px;
+  padding: 30px 40px;
+}
+
+/* COLUMNA IZQUIERDA */
+.dashboard-left {
+  width: 55%;
+}
+
+.dashboard-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* TARJETAS */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-icon {
+  font-size: 32px;
+  color: #ff7a00;
+}
+
+.card-content h3 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.value {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111;
+}
+
+.subtext {
+  font-size: 12px;
+  color: #999;
+}
+
+/* COLUMNA DERECHA — GRÁFICA */
+.dashboard-chart {
+  width: 45%;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.dashboard-chart h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
